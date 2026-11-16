@@ -1,9 +1,22 @@
 import type { Metadata } from "next";
-import { Inter, Instrument_Serif, JetBrains_Mono } from "next/font/google";
+import {
+  Inter,
+  Instrument_Serif,
+  JetBrains_Mono,
+  Space_Grotesk,
+} from "next/font/google";
 import { Footer } from "@/components/Footer";
 import { Navbar } from "@/components/Navbar";
 import { site } from "@/config/site";
 import "./globals.css";
+
+// Slightly tall, medium-weight face used only by the stacked logo mark.
+const spaceGrotesk = Space_Grotesk({
+  subsets: ["latin"],
+  weight: "700",
+  variable: "--font-logo-face",
+  display: "swap",
+});
 
 const inter = Inter({
   subsets: ["latin"],
@@ -67,7 +80,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${inter.variable} ${instrument.variable} ${jetbrains.variable}`}
+      className={`${spaceGrotesk.variable} ${inter.variable} ${instrument.variable} ${jetbrains.variable}`}
     >
       <body className="bg-canvas text-ink antialiased">
         <a

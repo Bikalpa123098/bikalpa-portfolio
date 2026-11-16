@@ -45,9 +45,10 @@ function PortfolioVisual() {
       </div>
       <span
         aria-hidden="true"
-        className="pointer-events-none absolute right-5 top-3 font-display text-[5rem] leading-none text-white/[0.035]"
+        className="pointer-events-none absolute right-5 top-3 flex flex-col font-logo text-[4rem] leading-[0.85] tracking-[-0.02em] text-white/[0.035]"
       >
-        BK
+        <span>BI</span>
+        <span className="pl-[0.32em]">KU</span>
       </span>
     </Window>
   );

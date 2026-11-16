@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import { navItems } from "@/config/site";
+import { Logo } from "@/components/ui/Logo";
 
 const sectionIds = navItems.map((item) => item.href.slice(1));
 
@@ -70,9 +71,7 @@ export function Navbar() {
           aria-label="Primary navigation"
         >
           <a href="#home" className="group flex items-center gap-3" aria-label="Bikalpa Koirala — home">
-            <span className="font-display text-2xl leading-none text-ink">
-              BK<span className="text-accent">.</span>
-            </span>
+            <Logo className="text-xl" />
             <span className="hidden h-4 w-px bg-line sm:block" aria-hidden="true" />
             <span className="hidden text-xs text-muted sm:block">Bikalpa Koirala</span>
           </a>
@@ -135,9 +134,7 @@ export function Navbar() {
             transition={{ duration: 0.25 }}
           >
             <div className="container-x flex h-20 items-center justify-between">
-              <span className="font-display text-2xl leading-none text-ink">
-                BK<span className="text-accent">.</span>
-              </span>
+              <Logo className="text-xl" />
               <button
                 type="button"
                 onClick={() => setMenuOpen(false)}

@@ -1,14 +1,13 @@
 import { ArrowUp } from "lucide-react";
 import { site } from "@/config/site";
+import { Logo } from "@/components/ui/Logo";
 
 export function Footer() {
   return (
     <footer className="border-t border-line py-10">
       <div className="container-x flex flex-col items-center justify-between gap-5 sm:flex-row">
         <div className="flex items-center gap-3">
-          <span className="font-display text-xl leading-none text-ink">
-            BK<span className="text-accent">.</span>
-          </span>
+          <Logo className="text-lg" />
           <span className="h-4 w-px bg-line" aria-hidden="true" />
           <span className="text-xs text-muted">{site.name}</span>
         </div>
